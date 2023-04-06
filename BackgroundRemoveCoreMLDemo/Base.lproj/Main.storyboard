@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BackgroundRemoveCoreMLDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RyD-tS-fUG">
+                                <rect key="frame" x="24" y="59" width="345" height="265"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Hdt-eV-bIa">
+                                <rect key="frame" x="24" y="377" width="345" height="302"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-VS-q94">
+                                <rect key="frame" x="24" y="758" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nhO-71-bDL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Remove"/>
+                                <connections>
+                                    <action selector="onRemoveTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kL0-rJ-iTg"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RyD-tS-fUG" secondAttribute="trailing" constant="24" id="7uY-ZH-ehj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DaS-VS-q94" secondAttribute="bottom" constant="20" id="LXt-mA-vGM"/>
+                            <constraint firstItem="Hdt-eV-bIa" firstAttribute="top" secondItem="RyD-tS-fUG" secondAttribute="bottom" constant="53" id="MsV-3l-Rfg"/>
+                            <constraint firstItem="DaS-VS-q94" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="QMM-ok-O4L"/>
+                            <constraint firstItem="Hdt-eV-bIa" firstAttribute="height" secondItem="RyD-tS-fUG" secondAttribute="height" multiplier="1.13962" id="XOD-Yg-UmM"/>
+                            <constraint firstItem="RyD-tS-fUG" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.311033" id="YNp-aO-qba"/>
+                            <constraint firstItem="RyD-tS-fUG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Zsf-hR-Jjd"/>
+                            <constraint firstItem="Hdt-eV-bIa" firstAttribute="centerX" secondItem="RyD-tS-fUG" secondAttribute="centerX" id="cLD-ld-ee2"/>
+                            <constraint firstItem="RyD-tS-fUG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="fZf-yE-fR5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DaS-VS-q94" secondAttribute="trailing" constant="24" id="pX3-rY-U9g"/>
+                            <constraint firstItem="Hdt-eV-bIa" firstAttribute="width" secondItem="RyD-tS-fUG" secondAttribute="width" id="u0B-CD-T2w"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="ivOrg" destination="RyD-tS-fUG" id="nXh-3m-R8d"/>
+                        <outlet property="ivResult" destination="Hdt-eV-bIa" id="Ld7-tL-I5o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.824427480916029" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

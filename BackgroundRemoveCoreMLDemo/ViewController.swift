@@ -75,7 +75,8 @@ class ViewController: UIViewController {
                         
                         let segmentationMask = segmentationmap.image(min: 0, max: 1)
 
-                        self.ivResult.image = segmentationMask!.resizedImage(for: self.inputImage.size)!
+                        let imgMask = segmentationMask!.resizedImage(for: self.inputImage.size)!
+                        self.maskInputImage(imgMask)
                     }
                 }
         }
